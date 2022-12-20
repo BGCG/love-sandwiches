@@ -6,7 +6,8 @@ import gspread
 # imports creditals class from google auth
 from google.oauth2.service_account import Credentials
 # all constant variable in caps
-# the scope lists the apis that the program should access in order for the program to run
+# the scope lists the apis that the program should access in order 
+# for the program to run
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -51,6 +52,7 @@ def validate_data(values):
     or if there aren't exactly 6 values.
     """
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f"Exactly 6 values required, you provided {len(values)}"
