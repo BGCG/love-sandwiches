@@ -24,6 +24,19 @@ sales = SHEET.worksheet('sales')
 
 # key take away from above is that you need these settings to access our spreadsheet data 
 # pull values from sales tab
-data = sales.get_all_values()
+# data = sales.get_all_values()
 
-print(data)
+# print(data)
+
+def get_sales_data():
+    """
+    Get sales figures input from user
+    """
+    print("Please enter sales data from the last market.")
+    print("Data should be six numbers, seperated by commas.")
+    print("Example: 10,20,30,40,50,60\n")
+
+    data_str = input("Enter you data here: ")
+    print(f"The data provided is {data_str}")
+
+get_sales_data()
